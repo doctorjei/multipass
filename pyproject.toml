@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multipass-auth"
+dynamic = ["version"]
+description = "Reusable browser-login building blocks: credential resolution, persistent browser contexts, branded config, and a recogniser-loop auth engine"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Jei Blanchard" }]
+keywords = ["authentication", "credentials", "playwright", "sso"]
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: Utilities",
+]
+
+# Playwright drives the browser; duo-pass answers the Duo challenge (the
+# default built-in factor plugin). The duo-pass floor is the release carrying
+# the injectable passcode source -- multipass never takes an `input()` path it
+# cannot redirect.
+dependencies = ["playwright>=1.40", "duo-pass>=0.0.2"]
+
+[project.urls]
+Homepage = "https://github.com/doctorjei/multipass-auth"
+Source = "https://github.com/doctorjei/multipass-auth"
+Issues = "https://github.com/doctorjei/multipass-auth/issues"
+
+[tool.setuptools]
+packages = ["multipass"]
+
+[tool.setuptools.dynamic]
+version = { attr = "multipass.__version__" }
