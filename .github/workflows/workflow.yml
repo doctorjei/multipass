@@ -1,7 +1,7 @@
 # Publish to PyPI on every GitHub release, via trusted publishing (no token).
 # The PyPI side holds a pending publisher for this project; if it names an
 # environment, add `environment: <name>` to the publish job below.
-name: publish
+name: release
 
 on:
   release:
