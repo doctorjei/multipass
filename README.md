@@ -1,8 +1,8 @@
-# multipass-auth
+# multipass
 
 Reusable browser-login building blocks, spun out of
-[canvasser](https://github.com/doctorjei/canvasser). Import name is
-`multipass`; the distribution is `multipass-auth`. GPL-3.0-or-later.
+[canvasser](https://github.com/doctorjei/canvasser). Import name and
+distribution are both `multipass`. GPL-3.0-or-later.
 
 Ships four modules: **credential resolution** (`multipass.credentials`),
 **persistent browser contexts** with 700/600 debug snapshots (`multipass.browser`),
